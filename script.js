@@ -4,8 +4,13 @@ next = document.querySelector(".start")
 show = document.querySelector(".show")
 prev = document.querySelector(".prev")
 done = document.querySelector(".done")
+flag = document.querySelector(".flag")
+main = document.querySelector(".main")
+divMarked = document.querySelector(".marked-words")
 
 let flashed = [];
+
+let marked = []
 
 prev_no = null;
 keys = []
@@ -29,6 +34,8 @@ next.addEventListener("click",() =>{
         next.className = "next";
         show.style.display = "flex"
         done.style.display = "flex"
+        flag.style.display = "flex"
+        main.style.width = "75%";
     }else{
         prev_no = no;
     }
@@ -37,10 +44,18 @@ next.addEventListener("click",() =>{
         prev.style.display = "flex";
     }
 
-    
+    if(keys[no] in marked){
+        flag.src = "./icons/checked.svg";
+    }
+    else{
+        flag.src = "./icons/flag.svg";
+    }
+
     no = Math.floor(Math.random() * keys.length);
-    flashed.push(no)
-    done.innerHTML = `${flashed.length} out of ${keys.length} Flashed`
+    if(!(marked.includes(keys[no]))){
+        flashed.push(no)
+    }
+    done.innerHTML = `${flashed.length} out of ${keys.length} Cards Flashed`
 
     word.innerHTML = keys[no];
     word.style.animation = "animword 0.5s forwards";
@@ -61,7 +76,12 @@ show.addEventListener("click",()=>{
 
 
 prev.addEventListener("click",()=>{
-
+    if(marked.includes(keys[prev_no])){
+        flag.src = "./icons/checked.svg";
+    }
+    else{
+        flag.src = "./icons/flag.svg";
+    }
     word.innerHTML = keys[prev_no];
     word.style.animation = "animword 0.5s forwards";
     mean.style.display = "none";
@@ -71,6 +91,29 @@ prev.addEventListener("click",()=>{
 
 });
 
+flag.addEventListener("click",()=>{
+    if(keys[no] !== null && marked.includes(keys[no])){
+        flag.src = "./icons/flag.svg";
+        marked = marked.filter(item => item !== keys[no])
+    }
+    else{
+        flag.src = "./icons/checked.svg";
+        marked.push(keys[no]);
+    }
+
+    divMarked.innerHTML = "";
+
+    marked.forEach((x, i) => {
+        if(divMarked.innerHTML === ""){
+            divMarked.innerHTML = x;
+        }
+        else{
+        divMarked.innerHTML = `${divMarked.innerHTML} , ${x} `
+        }
+    });
+
+})
+
 function rmanim(){
     word.style.animation = "none";
 }
@@ -78,3 +121,4 @@ function rmanim(){
 function animean(){
     mean.style.animation = "none";
 }
+

@@ -11,22 +11,30 @@
     <title>High Frequency Words Flash Cards</title>
 </head>
 <body>
-    <main>
+    <main class="main">
         <h1 class="word"></h1>
         <h2 class="mean"></h2>
         
         <div class="buttons">
+            
             <button class="prev btn" style="display: none;">Prev</button>
             <button class="show btn" style="display: none;">Show</button>
             <button class="start btn">START</button>
             
+        </div>
+        <div class="flagdiv">
+            <img src="./icons/flag.svg" class="flag" style="display: none;">
         </div>
 
         <div class="foot">
             <p class="done"></p>
         </div>
 
+
     </main>
+    <side>
+        <span class="marked-words"></span>
+    </side>
 </body>
 <footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
