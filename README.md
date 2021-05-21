@@ -6,3 +6,6 @@ To add more words and their meaing just edit the docx file or the json file dire
  - Script runs whenever the Docx file is updated or modified
  - It creates a new JSON file
  - The website then uses the JSON file to prepare the Flash Cards
+
+
+https://priceless-meitner-ccef02.netlify.app/
