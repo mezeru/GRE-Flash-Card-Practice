@@ -28,20 +28,20 @@ body {
   .prev {
     border-width: 1px;
     margin: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 5px;
     margin-top: 1.5rem;
-
-    color: rgb(209, 224, 226);
+    padding: 1%;
+    color: rgb(255, 255, 255);
   }
 
   .next,
   .prev {
-    background-color: rgb(34, 34, 160);
+    background-color: rgb(68, 0, 255);
   }
 
   .show {
-    background-color: rgb(15, 73, 13);
+    background-color: rgb(224, 210, 14);
   }
 }
 

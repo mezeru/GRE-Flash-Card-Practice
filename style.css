@@ -40,19 +40,20 @@ body .mean {
 .buttons .prev {
   border-width: 1px;
   margin: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-radius: 5px;
   margin-top: 1.5rem;
-  color: #d1e0e2;
+  padding: 1%;
+  color: white;
 }
 
 .buttons .next,
 .buttons .prev {
-  background-color: #2222a0;
+  background-color: #4400ff;
 }
 
 .buttons .show {
-  background-color: #0f490d;
+  background-color: #e0d20e;
 }
 
 @-webkit-keyframes animword {
