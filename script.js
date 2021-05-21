@@ -4,6 +4,8 @@ next = document.querySelector(".next")
 show = document.querySelector(".show")
 prev = document.querySelector(".prev")
 
+const animword = 
+
 prev_no = null;
 keys = []
 let no = null;
@@ -33,9 +35,10 @@ next.addEventListener("click",() =>{
     no = Math.floor(Math.random() * keys.length);
 
     word.innerHTML = keys[no];
+    word.style.animation = "animword 0.5s forwards";
     mean.style.display = "none";
-    mean.innerHTML = Data[word.innerHTML]
-
+    mean.innerHTML = Data[word.innerHTML];
+    setTimeout(rmanim, 600);
 });
 
 show.addEventListener("click",()=>{
@@ -43,6 +46,8 @@ show.addEventListener("click",()=>{
         alert("Please Press Next First");
     }else{
         mean.style.display = "block";
+        mean.style.animation = "animmean 0.5s forwards";
+        setTimeout(animean,600);
     }
 })
 
@@ -50,8 +55,18 @@ show.addEventListener("click",()=>{
 prev.addEventListener("click",()=>{
 
     word.innerHTML = keys[prev_no];
+    word.style.animation = "animword 0.5s forwards";
     mean.style.display = "none";
     mean.innerHTML = Data[word.innerHTML]
     prev.style.display = "none";
+    setTimeout(rmanim, 600);
 
 });
+
+function rmanim(){
+    word.style.animation = "none";
+}
+
+function animean(){
+    mean.style.animation = "none";
+}

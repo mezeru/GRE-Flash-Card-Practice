@@ -54,4 +54,40 @@ body .mean {
 .buttons .show {
   background-color: #0f490d;
 }
+
+@-webkit-keyframes animword {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 500%;
+  }
+}
+
+@keyframes animword {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 500%;
+  }
+}
+
+@-webkit-keyframes animmean {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animmean {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
