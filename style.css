@@ -91,4 +91,32 @@ body .mean {
     opacity: 1;
   }
 }
+
+@media (max-device-width: 480px) {
+  @-webkit-keyframes animword {
+    0% {
+      font-size: 0px;
+    }
+    100% {
+      font-size: 40px;
+    }
+  }
+  @keyframes animword {
+    0% {
+      font-size: 0px;
+    }
+    100% {
+      font-size: 40px;
+    }
+  }
+  body .word {
+    font-size: 40px;
+  }
+  body .mean {
+    font-size: 20px;
+  }
+  body .btn {
+    font-size: 10px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
