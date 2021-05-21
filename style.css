@@ -36,7 +36,8 @@ body .mean {
 }
 
 .buttons .next,
-.buttons .show {
+.buttons .show,
+.buttons .prev {
   border-width: 1px;
   margin: 1.5rem;
   font-size: 2rem;
@@ -45,7 +46,8 @@ body .mean {
   color: #d1e0e2;
 }
 
-.buttons .next {
+.buttons .next,
+.buttons .prev {
   background-color: #2222a0;
 }
 
