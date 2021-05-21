@@ -1,10 +1,11 @@
 word = document.querySelector(".word")
 mean = document.querySelector(".mean")
-next = document.querySelector(".next")
+next = document.querySelector(".start")
 show = document.querySelector(".show")
 prev = document.querySelector(".prev")
+done = document.querySelector(".done")
 
-const animword = 
+let flashed = [];
 
 prev_no = null;
 keys = []
@@ -18,12 +19,16 @@ $.getJSON("./content.json", function(data){
     }
 });
 
+
+
 next.addEventListener("click",() =>{
 
     if(no == null){
         prev.style.display = "flex";
         next.innerHTML = "Next";
+        next.className = "next";
         show.style.display = "flex"
+        done.style.display = "flex"
     }else{
         prev_no = no;
     }
@@ -32,7 +37,10 @@ next.addEventListener("click",() =>{
         prev.style.display = "flex";
     }
 
+    
     no = Math.floor(Math.random() * keys.length);
+    flashed.push(no)
+    done.innerHTML = `${flashed.length} out of ${keys.length} Flashed`
 
     word.innerHTML = keys[no];
     word.style.animation = "animword 0.5s forwards";

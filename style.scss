@@ -27,7 +27,8 @@ body {
   justify-content: center;
   .next,
   .show,
-  .prev {
+  .prev,
+  .start {
     border-width: 1px;
     margin: 1.5rem;
     font-size: 1.8rem;
@@ -35,6 +36,7 @@ body {
     margin-top: 1.5rem;
     padding: 1%;
     color: rgb(255, 255, 255);
+    cursor: pointer;
   }
 
   .next,
@@ -42,8 +44,34 @@ body {
     background-color: rgb(68, 0, 255);
   }
 
+  .start {
+    background-color: indigo;
+    box-shadow: 0 10px rgb(175, 171, 171);
+    border-radius: 15px;
+    font-size: 5rem;
+    padding: 5%;
+    transition: transform 0.5s;
+    transition: background-color 1s ease;
+  }
+
+  .start:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
   .show {
     background-color: rgb(224, 210, 14);
+  }
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  .done {
+    font-size: 2rem;
+    font-family: "Rubik", sans-serif;
+    color: rgba(172, 255, 47, 0.705);
   }
 }
 
