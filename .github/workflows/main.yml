@@ -45,6 +45,7 @@ jobs:
            add: 'content.json'
            message: 'JSON updated'
            push: '-f'
+           pull_strategy: 'NO-PULL'
            github_token: $((secrets.GITHUB_TOKEN))
            
 
