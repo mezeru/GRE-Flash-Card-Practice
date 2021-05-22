@@ -41,6 +41,7 @@ body .word {
   font-family: Google Sans, arial, sans-serif;
   font-size: 500%;
   color: #ee0a37;
+  text-shadow: 5px 1px 10px #525050;
   margin: 1% 0 2% 0;
 }
 
@@ -49,6 +50,7 @@ body .mean {
   font-family: sans-serif;
   font-size: 200%;
   color: #31a7d6;
+  text-shadow: 2px 1px 5px #5852af94;
 }
 
 .buttons {
@@ -78,6 +80,16 @@ body .mean {
   background-color: #4400ff;
 }
 
+.buttons .next:hover,
+.buttons .prev:hover {
+  background-color: rgba(68, 0, 255, 0.904);
+  color: rgba(255, 255, 255, 0.918);
+}
+
+.buttons .show:hover {
+  background-color: rgba(208, 211, 28, 0.911);
+}
+
 .buttons .start {
   background-color: indigo;
   -webkit-box-shadow: 0 10px #afabab;
@@ -102,7 +114,9 @@ body .mean {
 }
 
 .buttons .show {
-  background-color: #e0d20e;
+  background-color: #d0d31c;
+  -webkit-box-shadow: 1px 2px 10px #585757;
+          box-shadow: 1px 2px 10px #585757;
 }
 
 .foot {
@@ -334,8 +348,10 @@ side {
 }
 
 side .marked-words {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 15px #626262;
   color: #d4d812;
 }
 /*# sourceMappingURL=style.css.map */
