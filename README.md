@@ -9,6 +9,8 @@ To add more words and their meaing just edit the docx file or the json file dire
 - Marking / Unmarking (Mark a word you have difficulty remembering / Unmarks once you are famaliar witht he word)
 - Review (Words Marked will occur more frequently to help you get acquainted with them)
 
+<br>
+
  The script used to convert the Docx to JSON can be found at : https://github.com/mezeru/Key-Value-to-JSON
  - Script runs whenever the Docx file is updated or modified
  - It creates a new JSON file
