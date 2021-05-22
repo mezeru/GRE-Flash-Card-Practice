@@ -78,6 +78,8 @@ next.addEventListener("click",() =>{
     if(review){
         no = Math.floor(Math.random() * marked.length);
         word.innerHTML = marked[no];
+        flag.src = "./icons/checked.svg";
+        console.log(flag.src)
 
     }else{
         no = Math.floor(Math.random() * keys.length);
@@ -141,6 +143,10 @@ flag.addEventListener("click",()=>{
     if(keys[no] !== null && marked.includes(keys[no])){
         flag.src = "./icons/flag.svg";
         marked = marked.filter(item => item !== keys[no])
+    }
+    else if(review){
+        flag.src = "./icons/flag.svg";
+        marked = marked.filter(item => item !== marked[no])
     }
     else{
         flag.src = "./icons/checked.svg";
