@@ -85,6 +85,7 @@ show.addEventListener("click",()=>{
 
 
 prev.addEventListener("click",()=>{
+    window.speechSynthesis.cancel();
     if(prev_no){
     no = prev_no;
     if(marked.includes(keys[no])){
