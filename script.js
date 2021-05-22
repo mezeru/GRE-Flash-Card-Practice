@@ -39,6 +39,7 @@ next.addEventListener("click",() =>{
         flag.style.display = "flex"
         main.style.width = "75%";
         speak.style.display = "flex"
+        
     }else{
         prev_no = no;
     }
@@ -53,13 +54,14 @@ next.addEventListener("click",() =>{
     else{
         flag.src = "./icons/flag.svg";
     }
-
+    show.style.animation = "showcame 0.5s forwards"
+    show.style.display = "flex";
     no = Math.floor(Math.random() * keys.length);
     if(!(marked.includes(keys[no]))){
         flashed.push(no)
     }
     done.innerHTML = `${flashed.length} out of ${keys.length} Cards Flashed`
-    speak.style.animation = "animspeak 0.5s forwards"
+    speak.style.animation = "animspeakfor 0.5s forwards"
     word.innerHTML = keys[no];
     word.style.animation = "animword 0.5s forwards";
     mean.style.display = "none";
@@ -73,14 +75,15 @@ show.addEventListener("click",()=>{
         alert("Please Press Next First");
     }else{
         mean.style.display = "block";
-        
         mean.style.animation = "animmean 0.5s forwards";
+        show.style.animation = "showgone 0.5s forwards"
         setTimeout(animean,600);
     }
 })
 
 
 prev.addEventListener("click",()=>{
+    if(prev_no){
     no = prev_no;
     if(marked.includes(keys[no])){
         flag.src = "./icons/checked.svg";
@@ -90,12 +93,13 @@ prev.addEventListener("click",()=>{
     }
     word.innerHTML = keys[no];
     word.style.animation = "animword 0.5s forwards";
-    speak.style.animation = "animspeak 0.5s forwards"
+    speak.style.animation = "animspeakback 0.5s forwards"
     mean.style.display = "none";
     mean.innerHTML = Data[word.innerHTML]
     prev.style.display = "none";
     setTimeout(rmanim, 600);
     setTimeout(animspeak, 600);
+    }
 
 });
 
@@ -110,16 +114,17 @@ flag.addEventListener("click",()=>{
     }
 
     divMarked.innerHTML = "";
-
+    divMarked.style.animation = "span 1s forwards"
     marked.forEach((x, i) => {
         if(divMarked.innerHTML === ""){
             divMarked.innerHTML = x;
         }
         else{
         divMarked.innerHTML = `${divMarked.innerHTML} , ${x} `
+        
         }
     });
-
+    setTimeout(animspan, 1010);
 })
 
 speak.addEventListener("click",()=>{
@@ -129,13 +134,19 @@ speak.addEventListener("click",()=>{
     else{
     wordSpeak.text = keys[no];
     window.speechSynthesis.speak(wordSpeak);
+    speak.style.color = "#ff3300";
 
     wordSpeak.onend = () => {
         speaking = null;
+        speak.style.color = "white";
     }
     speaking = true;
     }
 })
+
+function animspan(){
+    divMarked.style.animation = "none";
+}
 
 function rmanim(){
     word.style.animation = "none";
@@ -143,6 +154,8 @@ function rmanim(){
 
 function animean(){
     mean.style.animation = "none";
+    show.style.display = "none";
+    show.style.animation = "none";
 }
 
 function animspeak(){

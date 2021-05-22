@@ -32,6 +32,10 @@ body .speak {
           justify-content: center;
 }
 
+body .speak:hover {
+  color: #ff751a;
+}
+
 body .word {
   text-align: center;
   font-family: Google Sans, arial, sans-serif;
@@ -64,7 +68,6 @@ body .mean {
   margin: 1.5rem;
   font-size: 1.8rem;
   border-radius: 5px;
-  margin-top: 1.5rem;
   padding: 1%;
   color: white;
   cursor: pointer;
@@ -86,8 +89,8 @@ body .mean {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .buttons .start:hover {
@@ -114,7 +117,7 @@ body .mean {
 .foot .done {
   font-size: 2rem;
   font-family: "Rubik", sans-serif;
-  color: rgba(172, 255, 47, 0.705);
+  color: rgba(172, 255, 47, 0.883);
 }
 
 @-webkit-keyframes animword {
@@ -135,43 +138,125 @@ body .mean {
   }
 }
 
-@-webkit-keyframes animspeak {
+@-webkit-keyframes animspeakfor {
   0% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes animspeak {
+@keyframes animspeakfor {
   0% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animspeakback {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes animspeakback {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes showgone {
+  0% {
+    border-width: 1px;
+    margin: 1.5rem;
+    padding: 1%;
+    font-size: 1.8rem;
+  }
+  100% {
+    border-width: 0px;
+    margin: 0rem;
+    padding: 0%;
+    font-size: 0rem;
+  }
+}
+
+@keyframes showgone {
+  0% {
+    border-width: 1px;
+    margin: 1.5rem;
+    padding: 1%;
+    font-size: 1.8rem;
+  }
+  100% {
+    border-width: 0px;
+    margin: 0rem;
+    padding: 0%;
+    font-size: 0rem;
+  }
+}
+
+@-webkit-keyframes showcame {
+  0% {
+    border-width: 0px;
+    margin: 0rem;
+    padding: 0%;
+    font-size: 0rem;
+  }
+  100% {
+    border-width: 1px;
+    margin: 1.5rem;
+    padding: 1%;
+    font-size: 1.8rem;
+  }
+}
+
+@keyframes showcame {
+  0% {
+    border-width: 0px;
+    margin: 0rem;
+    padding: 0%;
+    font-size: 0rem;
+  }
+  100% {
+    border-width: 1px;
+    margin: 1.5rem;
+    padding: 1%;
+    font-size: 1.8rem;
   }
 }
 
 @-webkit-keyframes animmean {
   0% {
-    opacity: 0;
+    font-size: 0%;
   }
   100% {
-    opacity: 1;
+    font-size: 200%;
   }
 }
 
 @keyframes animmean {
   0% {
-    opacity: 0;
+    font-size: 0%;
   }
   100% {
-    opacity: 1;
+    font-size: 200%;
   }
 }
 
@@ -220,6 +305,28 @@ body .mean {
           filter: invert(88%) sepia(85%) saturate(2%) hue-rotate(284deg) brightness(111%) contrast(100%);
 }
 
+@-webkit-keyframes span {
+  0% {
+    color: #3d413d;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    color: #d4d812;
+  }
+}
+
+@keyframes span {
+  0% {
+    color: #3d413d;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    color: #d4d812;
+  }
+}
+
 side {
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
@@ -229,5 +336,6 @@ side {
 side .marked-words {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.8rem;
+  color: #d4d812;
 }
 /*# sourceMappingURL=style.css.map */
