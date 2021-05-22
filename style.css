@@ -132,6 +132,7 @@ body .mean {
   font-size: 2rem;
   font-family: "Rubik", sans-serif;
   color: rgba(172, 255, 47, 0.883);
+  text-align: center;
 }
 
 @-webkit-keyframes animword {
