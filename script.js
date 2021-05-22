@@ -7,6 +7,7 @@ done = document.querySelector(".done")
 flag = document.querySelector(".flag")
 main = document.querySelector(".main")
 divMarked = document.querySelector(".marked-words")
+speak = document.querySelector(".speak")
 
 let flashed = [];
 
@@ -112,6 +113,12 @@ flag.addEventListener("click",()=>{
         }
     });
 
+})
+
+speak.addEventListener("click",()=>{
+    let wordSpeak = new SpeechSynthesisUtterance();
+    wordSpeak.text = keys[no];
+    window.speechSynthesis.speak(wordSpeak);
 })
 
 function rmanim(){
