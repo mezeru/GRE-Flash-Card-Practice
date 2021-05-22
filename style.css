@@ -69,7 +69,7 @@ body .mean {
   border-width: 1px;
   margin: 1.5rem;
   font-size: 1.8rem;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 1%;
   color: white;
   cursor: pointer;
@@ -87,13 +87,13 @@ body .mean {
 }
 
 .buttons .show:hover {
-  background-color: rgba(208, 211, 28, 0.911);
+  background-color: rgba(208, 211, 28, 0.938);
 }
 
 .buttons .start {
   background-color: indigo;
-  -webkit-box-shadow: 0 10px #afabab;
-          box-shadow: 0 10px #afabab;
+  -webkit-box-shadow: 0 5px #afabab;
+          box-shadow: 0 5px #afabab;
   border-radius: 15px;
   font-size: 5rem;
   padding: 5%;
@@ -114,7 +114,7 @@ body .mean {
 }
 
 .buttons .show {
-  background-color: #d0d31c;
+  background-color: #ebd40d;
   -webkit-box-shadow: 1px 2px 10px #585757;
           box-shadow: 1px 2px 10px #585757;
 }
