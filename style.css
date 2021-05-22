@@ -33,7 +33,7 @@ body .speak {
 }
 
 body .speak:hover {
-  color: #ff751a;
+  color: #ff751a !important;
 }
 
 body .word {
