@@ -54,12 +54,14 @@ next.addEventListener("click",() =>{
     else{
         flag.src = "./icons/flag.svg";
     }
+    
     show.style.animation = "showcame 0.5s forwards"
     show.style.display = "flex";
     no = Math.floor(Math.random() * keys.length);
     if(!(marked.includes(keys[no]))){
         flashed.push(no)
     }
+    window.speechSynthesis.cancel();
     done.innerHTML = `${flashed.length} out of ${keys.length} Cards Flashed`
     speak.style.animation = "animspeakfor 0.5s forwards"
     word.innerHTML = keys[no];
