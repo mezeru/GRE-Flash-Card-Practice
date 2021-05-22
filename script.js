@@ -81,13 +81,14 @@ show.addEventListener("click",()=>{
 
 
 prev.addEventListener("click",()=>{
-    if(marked.includes(keys[prev_no])){
+    no = prev_no;
+    if(marked.includes(keys[no])){
         flag.src = "./icons/checked.svg";
     }
     else{
         flag.src = "./icons/flag.svg";
     }
-    word.innerHTML = keys[prev_no];
+    word.innerHTML = keys[no];
     word.style.animation = "animword 0.5s forwards";
     speak.style.animation = "animspeak 0.5s forwards"
     mean.style.display = "none";
