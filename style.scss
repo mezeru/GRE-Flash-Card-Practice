@@ -1,6 +1,7 @@
 $breakpoint-mobile: 480px;
 
 body {
+  margin-top: 5%;
   background-color: rgb(61, 65, 61);
   display: flex;
   flex-direction: column;
@@ -12,11 +13,19 @@ body {
     flex: 70%;
   }
 
+  .speak {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+  }
+
   .word {
     text-align: center;
     font-family: Google Sans, arial, sans-serif;
     font-size: 500%;
     color: rgb(238, 10, 55);
+    margin: 1% 0 2% 0;
   }
 
   .mean {
@@ -89,6 +98,15 @@ body {
   }
 }
 
+@keyframes animspeak {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 @keyframes animmean {
   0% {
     opacity: 0;
@@ -124,12 +142,15 @@ body {
 }
 
 .flagdiv {
+  margin: 2%;
   display: flex;
   justify-content: center;
 
   .flag {
     width: 50px;
     height: auto;
+    filter: invert(88%) sepia(85%) saturate(2%) hue-rotate(284deg)
+      brightness(111%) contrast(100%);
   }
 }
 
