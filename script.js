@@ -38,7 +38,10 @@ next.addEventListener("click",() =>{
         done.style.display = "flex"
         flag.style.display = "flex"
         main.style.width = "75%";
-        speak.style.display = "flex"
+
+        if ('speechSynthesis' in window) {
+            speak.style.display = "flex"
+        }
         
     }else{
         prev_no = no;
