@@ -178,24 +178,65 @@ body {
 
 @media (max-device-width: $breakpoint-mobile) {
   body {
+    margin-top: 2.5rem;
     @keyframes animword {
       0% {
         font-size: 0px;
       }
       100% {
-        font-size: 40px;
+        font-size: 30px;
       }
     }
+
+    @keyframes animmean {
+      0% {
+        font-size: 0;
+      }
+
+      100% {
+        font-size: 20px;
+      }
+    }
+
+    .speak {
+      width: 1px;
+      height: 1px;
+    }
+
     .word {
-      font-size: 40px;
+      font-size: 30px;
     }
 
     .mean {
       font-size: 20px;
     }
+    main {
+      .flagdiv {
+        .flag {
+          width: 10%;
+          height: auto;
+        }
+      }
+    }
 
-    .btn {
-      font-size: 10px;
+    .buttons {
+      .prev,
+      .show,
+      .next {
+        font-size: 15px;
+      }
+    }
+
+    .foot {
+      .done {
+        font-size: 15px;
+      }
+    }
+
+    side {
+      .marked-words {
+        font-size: 15px;
+      }
     }
   }
 }

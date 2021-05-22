@@ -275,12 +275,15 @@ body .mean {
 }
 
 @media (max-device-width: 480px) {
+  body {
+    margin-top: 2.5rem;
+  }
   @-webkit-keyframes animword {
     0% {
       font-size: 0px;
     }
     100% {
-      font-size: 40px;
+      font-size: 30px;
     }
   }
   @keyframes animword {
@@ -288,17 +291,49 @@ body .mean {
       font-size: 0px;
     }
     100% {
-      font-size: 40px;
+      font-size: 30px;
     }
   }
+  @-webkit-keyframes animmean {
+    0% {
+      font-size: 0;
+    }
+    100% {
+      font-size: 20px;
+    }
+  }
+  @keyframes animmean {
+    0% {
+      font-size: 0;
+    }
+    100% {
+      font-size: 20px;
+    }
+  }
+  body .speak {
+    width: 1px;
+    height: 1px;
+  }
   body .word {
-    font-size: 40px;
+    font-size: 30px;
   }
   body .mean {
     font-size: 20px;
   }
-  body .btn {
-    font-size: 10px;
+  body main .flagdiv .flag {
+    width: 10%;
+    height: auto;
+  }
+  body .buttons .prev,
+  body .buttons .show,
+  body .buttons .next {
+    font-size: 15px;
+  }
+  body .foot .done {
+    font-size: 15px;
+  }
+  body side .marked-words {
+    font-size: 15px;
   }
 }
 
