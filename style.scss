@@ -185,7 +185,7 @@ body {
         font-size: 0px;
       }
       100% {
-        font-size: 30px;
+        font-size: 40px;
       }
     }
 
@@ -195,21 +195,22 @@ body {
       }
 
       100% {
-        font-size: 15px;
+        font-size: 25px;
       }
     }
 
-    .speak {
-      width: 1px;
-      height: 1px;
+    .main {
+      .speak {
+        font-size: 25px;
+      }
     }
 
     .word {
-      font-size: 30px;
+      font-size: 40px;
     }
 
     .mean {
-      font-size: 15px;
+      font-size: 25px;
     }
     main {
       .flagdiv {
@@ -224,19 +225,19 @@ body {
       .prev,
       .show,
       .next {
-        font-size: 15px;
+        font-size: 25px;
       }
     }
 
     .foot {
       .done {
-        font-size: 15px;
+        font-size: 20px;
       }
     }
 
     side {
       .marked-words {
-        font-size: 15px;
+        font-size: 20px;
       }
     }
   }
