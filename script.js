@@ -14,6 +14,9 @@ let wordSpeak = new SpeechSynthesisUtterance();
 let speaking = null;
 let marked = []
 
+let review = false;
+let reviewTimer = 2;
+
 prev_no = null;
 keys = []
 let no = null;
@@ -47,6 +50,17 @@ next.addEventListener("click",() =>{
         prev_no = no;
     }
 
+    if(review){
+        review = false;
+        reviewTimer = Math.floor(Math.random() * 4);
+        console.log(reviewTimer);
+    }else if(reviewTimer === 0){
+        review = true;
+    }
+    else if(!review && reviewTimer > 0 && marked.length){
+        reviewTimer = reviewTimer - 1;
+    }
+
     if(prev.style.display === "none"){
         prev.style.display = "flex";
     }
@@ -60,14 +74,28 @@ next.addEventListener("click",() =>{
     
     show.style.animation = "showcame 0.5s forwards"
     show.style.display = "flex";
-    no = Math.floor(Math.random() * keys.length);
-    if(!(marked.includes(keys[no]))){
+
+    if(review){
+        no = Math.floor(Math.random() * marked.length);
+        word.innerHTML = marked[no];
+
+    }else{
+        no = Math.floor(Math.random() * keys.length);
+    }
+    if(!(flashed.includes(keys[no])) && !review){
         flashed.push(no)
     }
     window.speechSynthesis.cancel();
     done.innerHTML = `${flashed.length} out of ${keys.length} Cards Flashed`
-    speak.style.animation = "animspeakfor 0.5s forwards"
-    word.innerHTML = keys[no];
+    speak.style.animation = "animspeakfor 0.5s forwards";
+
+
+    if(review){
+        word.innerHTML = marked[no];
+    }
+    else{
+        word.innerHTML = keys[no];
+    }
     word.style.animation = "animword 0.5s forwards";
     mean.style.display = "none";
     mean.innerHTML = Data[word.innerHTML];
