@@ -300,7 +300,7 @@ body .mean {
       font-size: 0;
     }
     100% {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
   @keyframes animmean {
@@ -308,7 +308,7 @@ body .mean {
       font-size: 0;
     }
     100% {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
   body .speak {
@@ -319,7 +319,7 @@ body .mean {
     font-size: 30px;
   }
   body .mean {
-    font-size: 20px;
+    font-size: 15px;
   }
   body main .flagdiv .flag {
     width: 10%;
