@@ -128,10 +128,10 @@ body .mean {
   -webkit-box-shadow: 1px 2px 10px #585757;
           box-shadow: 1px 2px 10px #585757;
   border: 0px;
-  -webkit-transition: -webkit-transform 0.7s ease;
-  transition: -webkit-transform 0.7s ease;
-  transition: transform 0.7s ease;
-  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .foot {
@@ -144,6 +144,10 @@ body .mean {
 }
 
 .foot .done {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 2rem;
   font-family: "Rubik", sans-serif;
   color: rgba(172, 255, 47, 0.883);
@@ -383,6 +387,11 @@ body .mean {
   height: auto;
   -webkit-filter: invert(88%) sepia(85%) saturate(2%) hue-rotate(284deg) brightness(111%) contrast(100%);
           filter: invert(88%) sepia(85%) saturate(2%) hue-rotate(284deg) brightness(111%) contrast(100%);
+}
+
+.flagdiv .flag:hover {
+  -webkit-filter: invert(39%) sepia(50%) saturate(2579%) hue-rotate(3deg) brightness(105%) contrast(103%);
+          filter: invert(39%) sepia(50%) saturate(2579%) hue-rotate(3deg) brightness(105%) contrast(103%);
 }
 
 @-webkit-keyframes span {
