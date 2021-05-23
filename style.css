@@ -203,12 +203,16 @@ body .mean {
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
+    color: white;
+    opacity: 1;
   }
   100% {
     border-width: 0px;
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
+    color: rgba(255, 255, 255, 0);
+    opacity: 0;
   }
 }
 
@@ -218,12 +222,16 @@ body .mean {
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
+    color: white;
+    opacity: 1;
   }
   100% {
     border-width: 0px;
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
+    color: rgba(255, 255, 255, 0);
+    opacity: 0;
   }
 }
 
@@ -233,12 +241,16 @@ body .mean {
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
+    color: rgba(255, 255, 255, 0);
+    opacity: 0;
   }
   100% {
     border-width: 1px;
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
+    color: white;
+    opacity: 1;
   }
 }
 
@@ -248,12 +260,16 @@ body .mean {
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
+    color: rgba(255, 255, 255, 0);
+    opacity: 0;
   }
   100% {
     border-width: 1px;
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
+    color: white;
+    opacity: 1;
   }
 }
 
