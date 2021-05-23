@@ -78,6 +78,7 @@ body .mean {
 .buttons .next,
 .buttons .prev {
   background-color: #4400ff;
+  border: 0px;
 }
 
 .buttons .next:hover,
@@ -117,6 +118,7 @@ body .mean {
   background-color: #ebd40d;
   -webkit-box-shadow: 1px 2px 10px #585757;
           box-shadow: 1px 2px 10px #585757;
+  border: 0px;
 }
 
 .foot {
@@ -211,7 +213,7 @@ body .mean {
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
-    color: rgba(255, 255, 255, 0);
+    color: #ebd40d;
     opacity: 0;
   }
 }
@@ -230,7 +232,7 @@ body .mean {
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
-    color: rgba(255, 255, 255, 0);
+    color: #ebd40d;
     opacity: 0;
   }
 }
