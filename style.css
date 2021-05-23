@@ -92,8 +92,8 @@ body .mean {
 
 .buttons .start {
   background-color: indigo;
-  -webkit-box-shadow: 0 10px #afabab;
-          box-shadow: 0 10px #afabab;
+  -webkit-box-shadow: 0px 8px #afabab;
+          box-shadow: 0px 8px #afabab;
   border-radius: 15px;
   font-size: 5rem;
   padding: 5%;
