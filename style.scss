@@ -266,13 +266,14 @@ body {
   .flag {
     width: 50px;
     height: auto;
+    transition: filter 1.5s ease;
     filter: invert(88%) sepia(85%) saturate(2%) hue-rotate(284deg)
       brightness(111%) contrast(100%);
   }
 
   .flag:hover {
-    filter: invert(39%) sepia(50%) saturate(2579%) hue-rotate(3deg)
-      brightness(105%) contrast(103%);
+    filter: invert(39%) sepia(77%) saturate(1926%) hue-rotate(1deg)
+      brightness(103%) contrast(105%);
   }
 }
 
