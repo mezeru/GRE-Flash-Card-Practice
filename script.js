@@ -112,7 +112,7 @@ show.addEventListener("click",()=>{
         mean.style.display = "block";
         mean.style.animation = "animmean 0.5s forwards";
         show.style.animation = "showgone 0.5s forwards"
-        setTimeout(animean,600);
+        setTimeout(animean,505);
     }
 })
 
