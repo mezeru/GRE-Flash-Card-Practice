@@ -84,7 +84,7 @@ next.addEventListener("click",() =>{
     }else{
         no = Math.floor(Math.random() * keys.length);
     }
-    if(!(flashed.includes(keys[no])) && !review){
+    if(!(flashed.includes(no) && !review){
         flashed.push(no)
     }
     window.speechSynthesis.cancel();
