@@ -63,18 +63,24 @@ body {
   .prev {
     background-color: rgb(68, 0, 255);
     border: 0px;
-    transition: transform 0.7s ease;
+    transition: transform 0.5s ease;
   }
 
   .next:hover,
   .prev:hover {
     background-color: rgba(68, 0, 255, 0.904);
     color: rgba(255, 255, 255, 0.918);
-    transform: rotateZ(360deg) rotateX(360deg);
+  }
+
+  .next:hover {
+    transform: skewX(-20deg);
+  }
+  .prev:hover {
+    transform: skewX(20deg);
   }
 
   .show:hover {
-    transform: rotateZ(360deg) rotateY(360deg);
+    transform: rotateY(35deg);
   }
 
   .start {
@@ -97,7 +103,7 @@ body {
     background-color: rgb(235, 212, 13);
     box-shadow: 1px 2px 10px rgb(88, 87, 87);
     border: 0px;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
 }
 
