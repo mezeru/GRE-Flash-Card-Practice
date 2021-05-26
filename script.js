@@ -53,7 +53,6 @@ next.addEventListener("click",() =>{
     if(review){
         review = false;
         reviewTimer = Math.floor(Math.random() * 4);
-        console.log(reviewTimer);
     }else if(reviewTimer === 0){
         review = true;
     }
