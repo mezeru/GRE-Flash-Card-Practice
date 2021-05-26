@@ -78,8 +78,6 @@ next.addEventListener("click",() =>{
         no = Math.floor(Math.random() * marked.length);
         word.innerHTML = marked[no];
         flag.src = "./icons/checked.svg";
-        console.log(flag.src)
-
     }else{
         no = Math.floor(Math.random() * keys.length);
     }
