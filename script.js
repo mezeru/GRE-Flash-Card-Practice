@@ -171,7 +171,7 @@ speak.addEventListener("click",()=>{
         null;
     }
     else{
-    wordSpeak.text = keys[no];
+    wordSpeak.text = word.innerHTML;
     window.speechSynthesis.speak(wordSpeak);
     speak.style.color = "#ff3300";
 
