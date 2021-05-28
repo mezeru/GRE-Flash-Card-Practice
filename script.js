@@ -81,8 +81,11 @@ next.addEventListener("click",() =>{
     }else{
         no = Math.floor(Math.random() * keys.length);
     }
-    if(!(flashed.includes(no) && !review)){
-        flashed.push(no)
+    if(!flashed.includes(no)){
+        if(!review){
+            flashed.push(no)
+        }
+
     }
     window.speechSynthesis.cancel();
     done.innerHTML = `${flashed.length} out of ${keys.length} Cards Flashed`
