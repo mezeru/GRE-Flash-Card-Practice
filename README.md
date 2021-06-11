@@ -2,7 +2,7 @@
 This is a Website to practice the meaning of words which most frequently Occur in GRE Exam.
 To add more words and their meaing just edit the docx file or the json file directly
 
-### The Website is hosted on : https://priceless-meitner-ccef02.netlify.app/
+The Website is hosted on : https://gre-flash-cards.netlify.app/
 
 ### Features :
 - 300 High Frequency Words Flash Cards
