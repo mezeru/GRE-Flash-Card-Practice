@@ -1,7 +1,7 @@
 {
-    "name": "My Progressive Web Application",
-    "short_name": "Progressive",
-    "start_url": "/?home=true",
+    "name": "GRE Flash Cards",
+    "short_name": "FlashCards",
+    "start_url": "./index.html",
     "icons":[
       {
         "src": "assets/manifest-icon-192.png",
@@ -17,7 +17,7 @@
       }
     ],
     "theme_color": "#000000",
-    "background_color": "#FFFFFF",
+    "background_color": "#660066",
     "display": "fullscreen",
     "orientation": "portrait"
   }
