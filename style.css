@@ -72,7 +72,7 @@ body .mean {
   margin: 1.5rem;
   font-size: 1.8rem;
   border-radius: 15px;
-  padding: 1%;
+  padding: 15px;
   color: white;
   cursor: pointer;
 }
