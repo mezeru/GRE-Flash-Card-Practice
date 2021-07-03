@@ -8,6 +8,7 @@ The Website is hosted on : https://gre-flash-cards.netlify.app/
 - 300 High Frequency Words Flash Cards
 - Marking / Unmarking (Mark a word you have difficulty remembering / Unmark once you are famaliar with the word)
 - Review (Words Marked will occur more frequently to help you get acquainted with them)
+- Install on Native Device by clicking the install button when prompted
 
 <br>
 
