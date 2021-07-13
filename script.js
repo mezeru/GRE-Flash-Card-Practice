@@ -37,7 +37,7 @@ next.addEventListener("click",() =>{
         prev.style.display = "flex";
         next.innerHTML = "Next";
         next.className = "next";
-        show.style.display = "flex"
+        show.style.display = "block"
         done.style.display = "flex"
         flag.style.display = "flex"
         main.style.width = "75%";
@@ -72,7 +72,7 @@ next.addEventListener("click",() =>{
     }
     
     show.style.animation = "showcame 0.5s forwards"
-    show.style.display = "flex";
+    show.style.display = "block";
 
     if(review){
         no = Math.floor(Math.random() * marked.length);

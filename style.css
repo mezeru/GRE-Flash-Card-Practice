@@ -125,6 +125,7 @@ body .mean {
 }
 
 .buttons .show {
+  display: block;
   background-color: #ebd40d;
   -webkit-box-shadow: 1px 2px 10px #585757;
           box-shadow: 1px 2px 10px #585757;
@@ -153,6 +154,12 @@ body .mean {
   font-family: "Rubik", sans-serif;
   color: rgba(172, 255, 47, 0.883);
   text-align: center;
+}
+
+.form-btn {
+  text-align: center;
+  height: 2em;
+  width: 5em;
 }
 
 @-webkit-keyframes animword {
@@ -223,7 +230,7 @@ body .mean {
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
-    color: white;
+    color: #ebd40d;
     opacity: 1;
   }
   100% {
@@ -231,7 +238,6 @@ body .mean {
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
-    color: #ebd40d;
     opacity: 0;
   }
 }
@@ -242,7 +248,7 @@ body .mean {
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
-    color: white;
+    color: #ebd40d;
     opacity: 1;
   }
   100% {
@@ -250,7 +256,6 @@ body .mean {
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
-    color: #ebd40d;
     opacity: 0;
   }
 }

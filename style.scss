@@ -98,6 +98,7 @@ body {
   }
 
   .show {
+    display: block;
     background-color: rgb(235, 212, 13);
     box-shadow: 1px 2px 10px rgb(88, 87, 87);
     border: 0px;
@@ -115,6 +116,12 @@ body {
     color: rgba(172, 255, 47, 0.883);
     text-align: center;
   }
+}
+
+.form-btn{
+  text-align: center;
+  height: 2em;
+  width: 5em;
 }
 
 @keyframes animword {
@@ -152,16 +159,16 @@ body {
     margin: 1.5rem;
     padding: 1%;
     font-size: 1.8rem;
-    color: rgb(255, 255, 255);
+    color: rgb(235, 212, 13);
     opacity: 1;
   }
+
 
   100% {
     border-width: 0px;
     margin: 0rem;
     padding: 0%;
     font-size: 0rem;
-    color: rgb(235, 212, 13);
     opacity: 0;
   }
 }
