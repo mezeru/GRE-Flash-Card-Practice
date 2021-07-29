@@ -1,21 +1,38 @@
-word = document.querySelector(".word")
-mean = document.querySelector(".mean")
-next = document.querySelector(".start")
-show = document.querySelector(".show")
-prev = document.querySelector(".prev")
-done = document.querySelector(".done")
-flag = document.querySelector(".flag")
-main = document.querySelector(".main")
-divMarked = document.querySelector(".marked-words")
-speak = document.querySelector(".speak")
+const word = document.querySelector(".word")
+const mean = document.querySelector(".mean")
+const next = document.querySelector(".start")
+const show = document.querySelector(".show")
+const prev = document.querySelector(".prev")
+const done = document.querySelector(".done")
+const flag = document.querySelector(".flag")
+const main = document.querySelector(".main")
+const divMarked = document.querySelector(".marked-words")
+const speak = document.querySelector(".speak")
 
-let flashed = [];
+const resetMarked = document.querySelector(".reset-marked")
+resetMarked.addEventListener("click",() => {
+    localStorage.setItem("marked",null);
+    marked = [];
+    divMarked.innerHTML = "";
+
+});
+
+const resetFlash = document.querySelector(".reset-flashed")
+resetFlash.addEventListener("click",() => {
+    localStorage.setItem("flashed",null);
+    flashed = [];
+    no = null;
+    next.click();
+    
+});
+
+let flashed = localStorage.getItem("flashed") ? localStorage.getItem("flashed").split(",") : [];
 let wordSpeak = new SpeechSynthesisUtterance();
 let speaking = null;
-let marked = []
+let marked = localStorage.getItem("marked") ? localStorage.getItem("marked").split(",") : [];
 
 let review = false;
-let reviewTimer = 2;
+let reviewTimer = 3;
 
 prev_no = null;
 keys = []
@@ -34,7 +51,9 @@ $.getJSON("./content.json", function(data){
 next.addEventListener("click",() =>{
 
     if(no == null){
-        prev.style.display = "flex";
+        resetFlash.style.display = "block";
+        resetMarked.style.display = "block";
+        prev.style.display = "flex";      
         next.innerHTML = "Next";
         next.className = "next";
         show.style.display = "block"
@@ -83,10 +102,14 @@ next.addEventListener("click",() =>{
     }
     if(!flashed.includes(no)){
         if(!review){
-            flashed.push(no)
+            flashed.push(no);
         }
 
     }
+
+    localStorage.setItem("flashed",flashed);
+
+    
     window.speechSynthesis.cancel();
     done.innerHTML = `${flashed.length} out of ${keys.length} Cards Flashed`
     speak.style.animation = "animspeakfor 0.5s forwards";
@@ -149,14 +172,18 @@ flag.addEventListener("click",()=>{
     else if(review){
         flag.src = "./icons/flag.svg";
         marked = marked.filter(item => item !== marked[no])
+        localStorage.setItem("marked",marked);
     }
     else{
         flag.src = "./icons/checked.svg";
         marked.push(keys[no]);
+        localStorage.setItem("marked",marked);
     }
 
     divMarked.innerHTML = "";
     divMarked.style.animation = "span 1s forwards"
+
+
     marked.forEach((x, i) => {
         if(divMarked.innerHTML === ""){
             divMarked.innerHTML = x;
@@ -203,3 +230,14 @@ function animean(){
 function animspeak(){
     speak.style.animation = "none";
 }
+
+
+function eventFire(el, etype){
+    if (el.fireEvent) {
+      el.fireEvent('on' + etype);
+    } else {
+      var evObj = document.createEvent('Events');
+      evObj.initEvent(etype, true, false);
+      el.dispatchEvent(evObj);
+    }
+  }

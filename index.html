@@ -10,7 +10,14 @@
     <link rel="manifest" href="./manifest.json">
     <title>High Frequency Words Flash Cards</title>
 </head>
+
 <body>
+    
+    <div class="nav" style="display: flex;flex-direction: row; justify-content: space-evenly;">
+        <button class="reset-marked btn" style="display: none;">Reset Marked</button>
+        <button class="reset-flashed btn" style="display: none;">Reset Flashed</button>
+    </div>
+    
     <main class="main">
         <div class="speak-div">
         <i class="fa fa-volume-up speak" style="display: none;"></i>
@@ -20,9 +27,9 @@
 
         <div class="buttons">
             
-            <button class="prev btn" style="display: none;">Prev</button>
-            <button class="show btn" style="display: none;">Show</button>
-            <button class="start btn">START</button>
+            <button class="prev" style="display: none;">Prev</button>
+            <button class="show" style="display: none;">Show</button>
+            <button class="start">START</button>
             
         </div>
         <div class="flagdiv">
