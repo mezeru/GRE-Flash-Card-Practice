@@ -34,3 +34,7 @@ To use the GRE Frequent Words Flash Cards website effectively, follow these inst
 
 Conclusion
 The GRE Frequent Words Flash Cards website provides an interactive platform for practicing the meanings of high-frequency words commonly found in the GRE exam. With features such as marking, reviewing, and the ability to install as a PWA, the website offers an efficient way to improve vocabulary skills and enhance GRE exam preparation.
+
+
+
+![image](https://github.com/mezeru/GRE-Flash-Card-Practice/assets/57724250/26808837-a1dc-4cf7-b7f5-73de55cd4085)
